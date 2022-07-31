@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.viral32111.locationsharing">
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_title"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:supportsRtl="true"
+		android:theme="@style/Theme.LocationSharing">
+
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />
+		<meta-data
+			android:name="com.google.android.geo.API_KEY"
+			android:value="${MAPS_API_KEY}" />
+		<meta-data
+			android:name="com.viral32111.locationsharing.DATABASE.URI"
+			android:value="${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}" />
+		<meta-data
+			android:name="com.viral32111.locationsharing.DATABASE.USERNAME"
+			android:value="${DATABASE_USER}" />
+		<meta-data
+			android:name="com.viral32111.locationsharing.DATABASE.PASSWORD"
+			android:value="${DATABASE_PASSWORD}" />
+		<meta-data
+			android:name="com.viral32111.locationsharing.ENCRYPTION.KEY"
+			android:value="${ENCRYPTION_KEY}" />
+
+		<activity
+			android:name="com.viral32111.locationsharing.GroupMembersActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.GroupInviteActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.GroupManageActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.HomeActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.MiscManageActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.YourselfHistoryActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.YourselfEventsActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.YourselfBookmarksActivity"
+			android:exported="false" />
+		<activity
+			android:name="com.viral32111.locationsharing.RegistrationActivity"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/yourselfHistoryEntryConstraintLayout"
+	android:layout_width="match_parent"
+	android:layout_height="200dp"
+	android:layout_marginBottom="15dp"
+	android:background="#EDEDED"
+	android:paddingLeft="10dp"
+	android:paddingTop="7dp"
+	android:paddingRight="10dp"
+	android:paddingBottom="10dp"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
+	tools:layout_editor_absoluteY="88dp">
+
+	<TextView
+		android:id="@+id/yourselfHistoryEntryDateNameTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/activity_yourself_history_entry_dateposition"
+		android:textSize="16sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<com.google.android.gms.maps.MapView
+		android:id="@+id/yourselfHistoryEntryPreviewMapView"
+		android:layout_width="match_parent"
+		android:layout_height="155dp"
+		android:layout_marginTop="5dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/yourselfHistoryEntryDateNameTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,168 @@
+<resources>
+	<string name="app_title">Location Sharing</string>
+	<string name="app_author">An project by viral32111.</string>
+	<string name="app_version">Version 1.1.0, 31/07/2022.</string>
+
+	<string name="popup_issue">An unexpected error has been encountered, try again later.</string>
+	<string name="popup_name_invalid">Your name is empty, or does not meet the minimum requirements!</string>
+	<string name="popup_password_invalid">Your password is empty, or does not meet the minimum requirements!</string>
+	<string name="popup_password_mismatch">Your passwords do not match!</string>
+	<string name="popup_password_incorrect">Your password is incorrect!</string>
+	<string name="popup_group_impossible">You are not in a group.</string>
+	<string name="popup_group_create_name_invalid">You need to provide a name for your group.</string>
+	<string name="popup_group_permission">You are not the administrator of your group.</string>
+
+	<string name="activity_registration_textview_description">Sign-in or create an account to continue.</string>
+	<string name="activity_registration_textview_name">Name</string>
+	<string name="activity_registration_textview_password">Password</string>
+	<string name="activity_registration_textview_invitecode">Group Invite Code</string>
+	<string name="activity_registration_textview_tempaccount">Your account will automatically expire after 30 days.</string>
+	<string name="activity_registration_checkbox_tempaccount">Create temporary account?</string>
+	<string name="activity_registration_button_login">Login…</string>
+	<string name="activity_registration_button_register">Register…</string>
+	<string name="activity_registration_edittext_name">Name…</string>
+	<string name="activity_registration_edittext_password">Password…</string>
+	<string name="activity_registration_edittext_password_confirm">Confirm password…</string>
+	<string name="activity_registration_edittext_invitecode">Group invite code…</string>
+	<string name="activity_registration_popup_name_unknown">You are not registered yet!</string>
+	<string name="activity_registration_popup_password_tempaccount">You do not need to provide a password for a temporary account.</string>
+	<string name="activity_registration_popup_invitecode_unusable">You can only enter a group invite code when registering!</string>
+	<string name="activity_registration_popup_tempaccount_unusable">You can only enable temporary account when registering!</string>
+	<string name="activity_registration_popup_tempaccount_login">You cannot login to a temporary account, instead register for a new permanent account.</string>
+	<string name="activity_registration_popup_register_success">Your account has been created.</string>
+
+	<string name="navigation_drawer_open">Open</string>
+	<string name="navigation_drawer_close">Close</string>
+	<string name="navigation_header_name_none">No Name</string>
+	<string name="navigation_header_group_none">No Group</string>
+	<string name="navigation_menu_yourself_title">Yourself</string>
+	<string name="navigation_menu_yourself_history">View History</string>
+	<string name="navigation_menu_yourself_bookmarks">Manage Bookmarks</string>
+	<string name="navigation_menu_yourself_events">Manage Events</string>
+	<string name="navigation_menu_group_title">Group</string>
+	<string name="navigation_menu_group_members">View Members</string>
+	<string name="navigation_menu_group_invites">Manage Invites</string>
+	<string name="navigation_menu_group_manage">Manage Group</string>
+	<string name="navigation_menu_misc_title">Misc</string>
+	<string name="navigation_menu_misc_account">Manage Account</string>
+
+	<string name="activity_home_popup_provider_location_failure">Location is not enabled!</string>
+	<string name="activity_home_popup_permission_location_approximate_failure">Approximate location access is required!</string>
+	<string name="activity_home_popup_permission_location_exact_failure">Exact location access is required!</string>
+
+	<string name="activity_misc_manage_textview_title">Your Account</string>
+	<string name="activity_misc_manage_textview_description">These are the options for your account.</string>
+	<string name="activity_misc_manage_textview_registered">Registered: %s</string>
+	<string name="activity_misc_manage_textview_expires">Expires: %s</string>
+	<string name="activity_misc_manage_button_name">Change name…</string>
+	<string name="activity_misc_manage_button_password">Change password…</string>
+	<string name="activity_misc_manage_button_group_join">Join group…</string>
+	<string name="activity_misc_manage_button_group_create">Create group…</string>
+	<string name="activity_misc_manage_button_group_leave">Leave current group…</string>
+	<string name="activity_misc_manage_button_permanent">Convert to permanent account…</string>
+	<string name="activity_misc_manage_button_delete">Delete account…</string>
+	<string name="activity_misc_manage_edittext_name">New name…</string>
+	<string name="activity_misc_manage_edittext_password_old">Old password…</string>
+	<string name="activity_misc_manage_edittext_password_new">New password…</string>
+	<string name="activity_misc_manage_edittext_password_confirm">Confirm password…</string>
+	<string name="activity_misc_manage_edittext_group">Group invite code, or group name…</string>
+	<string name="activity_misc_manage_popup_name_changed">Your name has been changed.</string>
+	<string name="activity_misc_manage_popup_password_temporary">You cannot change the password for a temporary account.</string>
+	<string name="activity_misc_manage_popup_password_changed">Your password has been changed.</string>
+	<string name="activity_misc_manage_popup_group_impossible">You are already in a group.</string>
+	<string name="activity_misc_manage_popup_group_join_code_invalid">That group invite code does not exist.</string>
+	<string name="activity_misc_manage_popup_group_join_code_empty">You need to provide an invite code.</string>
+	<string name="activity_misc_manage_popup_group_join_success">You have joined the group.</string>
+	<string name="activity_misc_manage_popup_group_create_success">You have created a new group.</string>
+	<string name="activity_misc_manage_popup_group_leave_success">You have left your group.</string>
+	<string name="activity_misc_manage_popup_permanent_already">Your account is already permanent.</string>
+	<string name="activity_misc_manage_popup_permanent_changed">Your account is now permanent.</string>
+	<string name="activity_misc_manage_popup_delete_confirm">Are you sure you want to delete your account?</string>
+
+	<string name="activity_yourself_history_textview_title">Your History</string>
+	<string name="activity_yourself_history_textview_description">These are the locations you\'ve visited.</string>
+	<string name="activity_yourself_history_entry_dateposition">%s - %.4f, %.4f</string>
+	<string name="activity_yourself_history_entry_datebookmark">%s - %s</string>
+
+	<string name="activity_group_manage_textview_title">Manage Group</string>
+	<string name="activity_group_manage_textview_description">These are the options for your group.</string>
+	<string name="activity_group_manage_edittext_name">New group name…</string>
+	<string name="activity_group_manage_button_name">Change name…</string>
+	<string name="activity_group_manage_button_invites">Remove all invites…</string>
+	<string name="activity_group_manage_button_members">Kick all members…</string>
+	<string name="activity_group_manage_button_ownership">Transfer ownership…</string>
+	<string name="activity_group_manage_button_delete">Permanently delete…</string>
+	<string name="activity_group_manage_spinner_ownership">Select a group member…</string>
+	<string name="activity_group_manage_popup_name_changed">Group name has been changed.</string>
+	<string name="activity_group_manage_popup_invites_confirm">Are you sure you want to remove all invite codes?</string>
+	<string name="activity_group_manage_popup_invites_done">All invite codes have been removed.</string>
+	<string name="activity_group_manage_popup_members_confirm">Are you sure you want to kick all members (except you)?</string>
+	<string name="activity_group_manage_popup_members_done">All group members have been kicked.</string>
+	<string name="activity_group_manage_popup_ownership_confirm">Are you sure you want to change ownership of your group?</string>
+	<string name="activity_group_manage_popup_ownership_changed">Group ownership has been changed.</string>
+	<string name="activity_group_manage_popup_ownership_invalid">You must choose a member to change ownership of your group.</string>
+	<string name="activity_group_manage_popup_delete_confirm">Are you sure you want to delete your group?</string>
+
+	<string name="activity_group_invite_textview_title">Group Invites</string>
+	<string name="activity_group_invite_textview_description">These are the invites to your group.</string>
+	<string name="activity_group_invite_textview_entry_code">Code: %s</string>
+	<string name="activity_group_invite_textview_entry_created">Created: %s</string>
+	<string name="activity_group_invite_textview_entry_expires">Expires: %s</string>
+	<string name="activity_group_invite_button_entry_delete">Delete…</string>
+	<string name="activity_group_invite_button_create">Create new invite…</string>
+	<string name="activity_group_invite_popup_created">Created new invite code %s.</string>
+	<string name="activity_group_invite_popup_deleted">Invite has been deleted.</string>
+
+	<string name="activity_group_members_textview_title">Group Members</string>
+	<string name="activity_group_members_textview_description">These are the other users in your group.</string>
+	<string name="activity_group_members_textview_administrator">Group Administrator: %s</string>
+	<string name="activity_group_members_textview_entry_name">Name: %s</string>
+	<string name="activity_group_members_textview_entry_location">Location: %s</string>
+	<string name="activity_group_members_button_entry_kick">Kick…</string>
+	<string name="activity_group_members_popup_entry_kick_confirm">Are you sure you want to remove this member from your group?</string>
+	<string name="activity_group_members_popup_entry_kick_done">Member has been removed.</string>
+
+	<string name="activity_yourself_bookmarks_textview_title">Your Bookmarks</string>
+	<string name="activity_yourself_bookmarks_textview_description">These are the locations you\'ve saved.</string>
+	<string name="activity_yourself_bookmarks_entry_textview_name">%s</string>
+	<string name="activity_yourself_bookmarks_entry_button_delete">Delete…</string>
+	<string name="activity_yourself_bookmarks_popup_deleted">Bookmark has been deleted.</string>
+
+	<string name="activity_yourself_events_textview_title">Your Events</string>
+	<string name="activity_yourself_events_textview_description">These are the events you\'ve created.</string>
+	<string name="activity_yourself_events_button_create">Create a new event…</string>
+	<string name="activity_yourself_events_entry_textview_target">Target: %s</string>
+	<string name="activity_yourself_events_entry_textview_location">Location: %s</string>
+	<string name="activity_yourself_events_entry_textview_condition">Condition: %s</string>
+	<string name="activity_yourself_events_entry_textview_action">Action: %s</string>
+	<string name="activity_yourself_events_entry_button_delete">Delete…</string>
+	<string name="activity_yourself_events_popup_deleted">Event has been deleted.</string>
+	<string name="activity_yourself_events_popup_target_invalid">You must select a group member as the target.</string>
+	<string name="activity_yourself_events_popup_location_invalid">You must select a bookmark as the location.</string>
+	<string name="activity_yourself_events_popup_condition_invalid">You must select a condition to match.</string>
+	<string name="activity_yourself_events_popup_action_invalid">You must select an action to run.</string>
+	<string name="activity_yourself_events_popup_create">Created new event.</string>
+
+	<string name="dialog_bookmark_create_title">Create Bookmark</string>
+	<string name="dialog_bookmark_create_description">Set the friendly name and radius (in meters) of your new bookmark for %f, %f.</string>
+	<string name="dialog_bookmark_create_button_positive">Create</string>
+	<string name="dialog_bookmark_create_edittext_name_hint">Mother\'s House…</string>
+	<string name="dialog_bookmark_create_edittext_radius_hint">10…</string>
+	<string name="dialog_bookmark_create_error_name_invalid">Bookmark name is empty, or too long.</string>
+	<string name="dialog_bookmark_create_error_radius_invalid">You must provide a valid number for the radius of the bookmark.</string>
+	<string name="dialog_bookmark_create_error_radius_range">The bookmark radius is too low or too high.</string>
+	<string name="dialog_bookmark_create_popup_success">Bookmark has been created.</string>
+
+	<string name="notification_channel_name">Everything</string>
+	<string name="notification_channel_description">All notifications from this application.</string>
+	<string name="notification_test_title">Hello World!</string>
+	<string name="notification_test_text">I am a notification!</string>
+	<string name="notification_arrive_title">Arrival Event</string>
+	<string name="notification_arrive_text">%s arrived at %s.</string>
+	<string name="notification_leave_title">Leave Event</string>
+	<string name="notification_leave_text">%s left %s.</string>
+
+	<string name="dialog_event_create_title">Create Event</string>
+	<string name="dialog_event_create_description">Set the target group member, bookmarked location, condition to match and action to run for your new event below.</string>
+	<string name="dialog_event_create_button_positive">Create</string>
+</resources>

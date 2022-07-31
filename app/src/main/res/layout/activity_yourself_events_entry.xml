@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/yourselfEventsEntryConstraintLayout"
+	android:layout_width="match_parent"
+	android:layout_height="120dp"
+	android:layout_marginBottom="15dp"
+	android:background="#EDEDED"
+	android:paddingLeft="10dp"
+	android:paddingTop="7dp"
+	android:paddingRight="10dp"
+	android:paddingBottom="10dp"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
+	tools:layout_editor_absoluteY="88dp">
+
+	<TextView
+		android:id="@+id/yourselfEventsEntryTargetTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/activity_yourself_events_entry_textview_target"
+		android:textColor="#616161"
+		android:textSize="16sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/yourselfEventsEntryLocationTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:text="@string/activity_yourself_events_entry_textview_location"
+		android:textColor="#616161"
+		android:textSize="16sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/yourselfEventsEntryTargetTextView" />
+
+	<TextView
+		android:id="@+id/yourselfEventsEntryConditionTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:text="@string/activity_yourself_events_entry_textview_condition"
+		android:textColor="#616161"
+		android:textSize="16sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/yourselfEventsEntryLocationTextView" />
+
+	<TextView
+		android:id="@+id/yourselfEventsEntryActionTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:text="@string/activity_yourself_events_entry_textview_action"
+		android:textColor="#616161"
+		android:textSize="16sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/yourselfEventsEntryConditionTextView" />
+
+	<Button
+		android:id="@+id/yourselfEventsEntryDeleteButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/activity_yourself_events_entry_button_delete"
+		android:textColor="#4E342E"
+		android:textSize="12sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

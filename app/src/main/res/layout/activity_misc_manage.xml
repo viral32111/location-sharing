@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- https://stackoverflow.com/q/43098150 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/miscManageScrollView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:scrollbarStyle="insideOverlay"
+	tools:context=".MiscManageActivity">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/miscManageConstraintLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="10dp">
+
+		<TextView
+			android:id="@+id/miscManageTitleTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="133dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginEnd="133dp"
+			android:text="@string/activity_misc_manage_textview_title"
+			android:textAlignment="center"
+			android:textSize="24sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/miscManageDescriptionTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="80dp"
+			android:layout_marginEnd="80dp"
+			android:text="@string/activity_misc_manage_textview_description"
+			android:textAlignment="center"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageTitleTextView" />
+
+		<TextView
+			android:id="@+id/miscManageRegisteredTextView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:gravity="center"
+			android:text="@string/activity_misc_manage_textview_registered"
+			android:textAlignment="center"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageDescriptionTextView" />
+
+		<TextView
+			android:id="@+id/miscManageExpiresTextView"
+			android:layout_width="match_parent"
+			android:layout_height="24dp"
+			android:gravity="center"
+			android:text="@string/activity_misc_manage_textview_expires"
+			android:textAlignment="center"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			android:visibility="invisible"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageRegisteredTextView" />
+
+		<EditText
+			android:id="@+id/miscManageNameEditText"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginEnd="29dp"
+			android:autofillHints="name"
+			android:ems="10"
+			android:hint="@string/activity_misc_manage_edittext_name"
+			android:inputType="text"
+			android:singleLine="true"
+			android:textAlignment="textStart"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageExpiresTextView"
+			tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+		<Button
+			android:id="@+id/miscManageNameButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:onClick="onNameButtonClick"
+			android:text="@string/activity_misc_manage_button_name"
+			android:textColor="#4E342E"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageNameEditText" />
+
+		<EditText
+			android:id="@+id/miscManagePasswordOldEditText"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="29dp"
+			android:autofillHints="name"
+			android:ems="10"
+			android:hint="@string/activity_misc_manage_edittext_password_old"
+			android:inputType="text|textPassword"
+			android:singleLine="true"
+			android:textAlignment="textStart"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageNameButton"
+			tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+		<EditText
+			android:id="@+id/miscManagePasswordNewEditText"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:autofillHints="name"
+			android:ems="10"
+			android:hint="@string/activity_misc_manage_edittext_password_new"
+			android:inputType="text|textPassword"
+			android:singleLine="true"
+			android:textAlignment="textStart"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManagePasswordOldEditText"
+			tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+		<EditText
+			android:id="@+id/miscManagePasswordConfirmEditText"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:autofillHints="name"
+			android:ems="10"
+			android:hint="@string/activity_misc_manage_edittext_password_confirm"
+			android:inputType="text|textPassword"
+			android:singleLine="true"
+			android:textAlignment="textStart"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManagePasswordNewEditText"
+			tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+		<Button
+			android:id="@+id/miscManagePasswordButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:onClick="onPasswordButtonClick"
+			android:text="@string/activity_misc_manage_button_password"
+			android:textColor="#4E342E"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManagePasswordConfirmEditText" />
+
+		<EditText
+			android:id="@+id/miscManageGroupEditText"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="29dp"
+			android:autofillHints="name"
+			android:ems="10"
+			android:hint="@string/activity_misc_manage_edittext_group"
+			android:inputType="text"
+			android:singleLine="true"
+			android:textAlignment="textStart"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManagePasswordButton"
+			tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+		<Button
+			android:id="@+id/miscManageGroupJoinButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:onClick="onGroupJoinButtonClick"
+			android:text="@string/activity_misc_manage_button_group_join"
+			android:textColor="#4E342E"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageGroupEditText" />
+
+		<Button
+			android:id="@+id/miscManageGroupCreateButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:onClick="onGroupCreateButtonClick"
+			android:text="@string/activity_misc_manage_button_group_create"
+			android:textColor="#4E342E"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageGroupJoinButton" />
+
+		<Button
+			android:id="@+id/miscManageGroupLeaveButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:onClick="onGroupLeaveButtonClick"
+			android:text="@string/activity_misc_manage_button_group_leave"
+			android:textColor="#4E342E"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageGroupCreateButton" />
+
+		<Button
+			android:id="@+id/miscManagePermanentButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="29dp"
+			android:onClick="onPermanentButtonClick"
+			android:text="@string/activity_misc_manage_button_permanent"
+			android:textColor="#4E342E"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManageGroupLeaveButton" />
+
+		<Button
+			android:id="@+id/miscManageDeleteButton"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginStart="29dp"
+			android:layout_marginEnd="29dp"
+			android:onClick="onDeleteButtonClick"
+			android:text="@string/activity_misc_manage_button_delete"
+			android:textColor="#4E342E"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/miscManagePermanentButton" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

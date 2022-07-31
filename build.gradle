@@ -1,0 +1,12 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+
+    // https://developers.google.com/maps/documentation/android-sdk/config#step_3_add_your_api_key_to_the_project
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.1' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
