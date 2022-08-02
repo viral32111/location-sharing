@@ -20,7 +20,7 @@ I made this application with the intention for it to be feature-rich and superse
 * Location bookmarking
   * Save locations & areas to your account with recognisable names and a configurable radius.
   * Can be used in conjunction with scheduled events.
-  * Managed in the *Yourself -> Manage Bookmarks* activity.
+  * Managed in the *`Yourself -> Manage Bookmarks`* activity.
   * Viewable on the interactive map.
 * Scheduled events
   * Create complex events that trigger and execute actions whenever something happens.
@@ -29,23 +29,23 @@ I made this application with the intention for it to be feature-rich and superse
     * Specify a condition to match (e.g. arrives at location, leaves location, etc.).
     * Specify an action to execute (e.g. send a notification to your device).
   * Only for your account, they wont interfere with events other group members have.
-  * Managed in the *Yourself -> Manage Events* activity.
+  * Managed in the *`Yourself -> Manage Events`* activity.
   * **NOTE:** There are future plans to add a time-based options to these, so events can either trigger at certain times or only trigger within a time period.
 * Virtual groups
   * Customisable name that shows in the navigation drawer for each member in the group.
   * Private by design, can only join via an invite created by the group's administrator.
   * Administrated by the member that created the group, but ownership can be transferred to another group member.
     * **NOTE:** There are future plans to create a role-based permissions system for better administration.
-  * Group members can view a list of other group members (*Group -> View Members*).
+  * Group members can view a list of other group members (*`Group -> View Members`*).
     * List shows each members name and last known location (if it is known).
       * Location shows as a bookmark name if it is within the area of one of your personal bookmarks, otherwise it is longitude and latitude.
       * **NOTE:** There were plans to show street names but this was scrapped because the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/overview) is not free.
     * Group administrator has the option to kick (remove) individual members from the group.
-  * Invite codes can be managed by the group administrator (*Group -> Manage Invites*).
+  * Invite codes can be managed by the group administrator (*`Group -> Manage Invites`*).
     * Newly created codes are randomly-generated and expire automatically after 30 days.
     * Shows the invite code, the date it was created, and countdown until when it expires.
     * Individual invites can be deleted at any time.
-  * Group options can be managed by the group administrator  (*Group -> Manage Group*).
+  * Group options can be managed by the group administrator  (*`Group -> Manage Group`*).
     * Change the name of the group.
     * Bulk remove all invite codes, or bulk kick all members.
     * Transfer ownership (administrator abilities) to another group member.
@@ -53,6 +53,7 @@ I made this application with the intention for it to be feature-rich and superse
   * Creatable from the account management activity.
   * **NOTE:** At present a user can only join one group, but there are future plans to introduce multi-group support, but this would require a huge rewrite.
 * Account management
+  * Accessible in the *`Misc -> Manage Account`* activity.
   * Shows date account was registered.
   * Shows when the account expires, if the account is a temporary one.
   * Easily change your username & password.
@@ -71,7 +72,7 @@ I made this application with the intention for it to be feature-rich and superse
     * When registering or logging into an account for the first time, a prompt will show to grant either approximate or precise location permissions.
     * Locations are always AES encrypted before being stored in the database, for this and other features of the application.
       * **NOTE:** There are future plans to implement zero-trust security by deriving the encryption key from the account password, or randomly generated for temporary accounts.
-  * Viewable as a list of entries in the *Yourself -> View History* activity.
+  * Viewable as a list of entries in the *`Yourself -> View History`* activity.
   * Entries that show everywhere you have been with a small, non-interactive Google Maps embed.
   * Shows longitude and latitude unless the location matches a bookmark on your account, then it shows its name.
   * Red marker on the map identifies the exact recorded location.
@@ -80,6 +81,8 @@ I made this application with the intention for it to be feature-rich and superse
   * Helpful popups when theres an issue with something.
   * Confirmations for dangerous actions.
   * Follows Android styling conventions to maintain familiarity.
+
+I would publish screenshots of all these features in use, but the majority of them reveal too much personal information. Maybe one day in the future I'll do it anyway and just blur out the personal information.
 
 ## To-Do List
 
@@ -106,7 +109,7 @@ I wanted to create this application because in the past I have never had any maj
 
 ## Requirements
 
-This application requires a MySQL database using [the provided structure](/Database.sql) that all instances of the application are able to connect to, the address and credentials of this database should be configured in the Gradle `local.properties` file with the following keys referenced in the Android manifest:
+This application requires a MySQL database using [the provided structure](/Database.sql) that all instances of the application are able to connect to, the address and credentials of this database should be configured in the Gradle `local.properties` file with the following keys, referenced in the Android manifest:
 
 * `DATABASE_HOST` is the hostname/IP address of the MySQL server (e.g. `192.168.0.5`).
 * `DATABASE_PORT` is the port number of the MySQL server (e.g. `3306`).
@@ -117,7 +120,7 @@ This application requires a MySQL database using [the provided structure](/Datab
 In addition to the above, the following properties are also required:
 
 * `ENCRYPTION_KEY` must be set to a randomly generated string to be used when performing cryptographic operations. 
-* MAPS_API_KEY` must be set to the [Google Maps API](https://developers.google.com/maps/) key from the [Google Cloud APIs & services dashboard](https://console.cloud.google.com/apis/dashboard).
+* `MAPS_API_KEY` must be set to the [Google Maps API](https://developers.google.com/maps/) key from the [Google Cloud APIs & services dashboard](https://console.cloud.google.com/apis/dashboard).
 
 ## Acknowledgements
 
