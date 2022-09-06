@@ -1,6 +1,6 @@
 package com.viral32111.models
 
-import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.Table
 
 data class User(
 	val identifier: Int,

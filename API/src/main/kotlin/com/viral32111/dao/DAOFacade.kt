@@ -1,6 +1,6 @@
 package com.viral32111.dao
 
-import com.viral32111.models.*
+import com.viral32111.models.User
 
 // https://ktor.io/docs/interactive-website-add-persistence.html#persistence_logic
 interface DAOFacade {

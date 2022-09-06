@@ -1,8 +1,8 @@
 package com.viral32111.dao
 
-import com.viral32111.models.User
 import com.viral32111.dao.DatabaseFactory.databaseQuery
-import com.viral32111.models.*
+import com.viral32111.models.User
+import com.viral32111.models.Users
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.exposed.sql.*
 

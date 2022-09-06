@@ -1,19 +1,18 @@
 package com.viral32111
 
 import com.viral32111.dao.DatabaseFactory
-import com.viral32111.plugins.*
+import com.viral32111.plugins.setupRouting
+import io.github.cdimascio.dotenv.dotenv
 import io.ktor.serialization.gson.*
+import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.callloging.*
-import io.ktor.server.application.*
 import io.ktor.server.plugins.contentnegotiation.*
-import org.slf4j.event.Level
-import java.text.DateFormat
-import io.github.cdimascio.dotenv.dotenv
 import io.ktor.server.plugins.defaultheaders.*
 import io.ktor.server.sessions.*
-import java.net.http.HttpHeaders
+import org.slf4j.event.Level
+import java.text.DateFormat
 
 // Entrypoint
 fun main() {

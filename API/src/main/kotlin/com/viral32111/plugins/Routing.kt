@@ -1,6 +1,5 @@
 package com.viral32111.plugins
 
-import com.google.gson.JsonSerializer
 import com.viral32111.MySession
 import com.viral32111.dao.dao
 import io.ktor.http.*
