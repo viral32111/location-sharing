@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+	<configuration default="false" name="Development" type="JetRunConfigurationType">
+		<option name="MAIN_CLASS_NAME" value="com.viral32111.ApplicationKt" />
+		<module name="com.viral32111.locationsharingapi.main" />
+		<shortenClasspath name="NONE" />
+		<option name="VM_PARAMETERS" value="-Dio.ktor.development=true" />
+		<method v="2">
+			<option name="Make" enabled="true" />
+		</method>
+	</configuration>
+</component>
