@@ -2,6 +2,7 @@
 val ktorVersion: String by project
 val kotlinVersion: String by project
 val logbackVersion: String by project
+val exposedVersion: String by project
 
 plugins {
 	application
@@ -29,14 +30,26 @@ dependencies {
 	// Ktor Core
 	implementation( "io.ktor:ktor-server-core-jvm:$ktorVersion" )
 
-	// Ktor Call Logging
+	// Ktor Call Logging - https://ktor.io/docs/call-logging.html#add_dependencies
 	implementation( "io.ktor:ktor-server-call-logging:$ktorVersion" )
+
+	// Ktor Json - https://ktor.io/docs/serialization.html#add_json_dependency
+	implementation( "io.ktor:ktor-server-content-negotiation:$ktorVersion" )
+	implementation( "io.ktor:ktor-serialization-gson:$ktorVersion" )
 
 	// Netty Engine
 	implementation( "io.ktor:ktor-server-netty-jvm:$ktorVersion" )
 
 	// Logback
 	implementation( "ch.qos.logback:logback-classic:$logbackVersion" )
+
+	// Exposed
+	implementation( "org.jetbrains.exposed:exposed-core:$exposedVersion" )
+	implementation( "org.jetbrains.exposed:exposed-dao:$exposedVersion" )
+	implementation( "org.jetbrains.exposed:exposed-jdbc:$exposedVersion" )
+
+	// MySQL
+	implementation( "mysql:mysql-connector-java:8.0.30" )
 
 	// Unit Tests
 	testImplementation( "io.ktor:ktor-server-tests-jvm:$ktorVersion" )
