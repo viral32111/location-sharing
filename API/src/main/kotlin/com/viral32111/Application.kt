@@ -26,7 +26,7 @@ fun main() {
 
 	// Variables for running the HTTP server
 	val httpListenAddress: String = dotenv[ "HTTP_LISTEN_ADDRESS" ] ?: "127.0.0.1"
-	val httpListenPort: Int = dotenv[ "HTTP_LISTEN_NUMBER" ].toIntOrNull() ?: 80
+	val httpListenPort: Int = dotenv[ "HTTP_LISTEN_PORT" ].toIntOrNull() ?: 80
 
 	// Variables for connecting to the MySQL database server
 	val databaseServerAddress: String = dotenv[ "DATABASE_SERVER_ADDRESS" ]
