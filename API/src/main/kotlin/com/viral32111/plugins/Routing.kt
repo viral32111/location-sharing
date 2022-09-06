@@ -7,6 +7,8 @@ import io.ktor.server.routing.*
 
 // Default routing
 fun Application.setupRouting() {
+	log.info( "Setting up default routing." )
+
 	routing {
 
 		// Hello World

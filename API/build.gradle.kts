@@ -29,6 +29,9 @@ dependencies {
 	// Ktor Core
 	implementation( "io.ktor:ktor-server-core-jvm:$ktorVersion" )
 
+	// Ktor Call Logging
+	implementation( "io.ktor:ktor-server-call-logging:$ktorVersion" )
+
 	// Netty Engine
 	implementation( "io.ktor:ktor-server-netty-jvm:$ktorVersion" )
 
