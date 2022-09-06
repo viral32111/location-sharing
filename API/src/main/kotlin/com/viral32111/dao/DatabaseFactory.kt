@@ -12,6 +12,7 @@ object DatabaseFactory {
 	fun initialize( serverAddress: String, serverPort: Int, userName: String, userPassword: String, databaseName: String ) {
 
 		// "Connect" to MySQL database - https://ktor.io/docs/interactive-website-add-persistence.html#connect_db
+		// https://github.com/JetBrains/Exposed/wiki/DataBase-and-DataSource#datasource
 		Database.connect( "jdbc:mysql://${serverAddress}:${serverPort}/${databaseName}",
 			driver = "com.mysql.cj.jdbc.Driver",
 			user = userName,

@@ -11,6 +11,7 @@ import io.ktor.server.plugins.contentnegotiation.*
 import org.slf4j.event.Level
 import java.text.DateFormat
 import io.github.cdimascio.dotenv.dotenv
+import io.ktor.server.sessions.*
 
 // Entrypoint
 fun main() {
@@ -66,6 +67,12 @@ fun main() {
 
 		}
 
+		// Setup sessions - https://ktor.io/docs/sessions.html#install_plugin
+		// https://github.com/ktorio/ktor-documentation/blob/main/codeSnippets/snippets/session-header-server/src/main/kotlin/com/example/Application.kt
+		install( Sessions ) {
+			header<MySession>( "Session-Token", SessionStorageMemory() ) // Storing in-memory is only intended for development
+		}
+
 		// Add default routing code
 		setupRouting()
 
@@ -75,3 +82,8 @@ fun main() {
 	server.start( wait = true )
 
 }
+
+data class MySession(
+	val identifier: Int,
+	val data: String
+)

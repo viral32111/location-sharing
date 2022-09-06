@@ -1,11 +1,13 @@
 package com.viral32111.plugins
 
 import com.google.gson.JsonSerializer
+import com.viral32111.MySession
 import com.viral32111.dao.dao
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import io.ktor.server.sessions.*
 
 // Default routing
 fun Application.setupRouting() {
@@ -26,6 +28,32 @@ fun Application.setupRouting() {
 		// Useful for testing in browsers
 		get( "/favicon.ico" ) {
 			call.respond( HttpStatusCode.Gone )
+		}
+
+		// Create session
+		get( "/session/create" ) {
+			call.sessions.set( MySession(
+				identifier = 1,
+				data = "I'm example data!"
+			) )
+
+			call.respond( HttpStatusCode.OK )
+		}
+
+		// View session
+		get( "/session/view" ) {
+			val session = call.sessions.get<MySession>()
+			if ( session != null ) {
+				call.respondText( session.data, ContentType.Text.Plain )
+			} else {
+				call.respond( HttpStatusCode.BadRequest )
+			}
+		}
+
+		// Delete session
+		get( "/session/delete" ) {
+			call.sessions.clear<MySession>()
+			call.respond( HttpStatusCode.OK )
 		}
 
 	}

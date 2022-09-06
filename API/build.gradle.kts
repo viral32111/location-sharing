@@ -37,6 +37,9 @@ dependencies {
 	implementation( "io.ktor:ktor-server-content-negotiation:$ktorVersion" )
 	implementation( "io.ktor:ktor-serialization-gson:$ktorVersion" )
 
+	// Ktor Sessions - https://ktor.io/docs/sessions.html#add_dependencies
+	implementation( "io.ktor:ktor-server-sessions:$ktorVersion" )
+
 	// Netty Engine
 	implementation( "io.ktor:ktor-server-netty-jvm:$ktorVersion" )
 
