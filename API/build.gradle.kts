@@ -40,6 +40,9 @@ dependencies {
 	// Ktor Sessions - https://ktor.io/docs/sessions.html#add_dependencies
 	implementation( "io.ktor:ktor-server-sessions:$ktorVersion" )
 
+	// Ktor Default Headers - https://ktor.io/docs/default-headers.html#add_dependencies
+	implementation( "io.ktor:ktor-server-default-headers:$ktorVersion" )
+
 	// Netty Engine
 	implementation( "io.ktor:ktor-server-netty-jvm:$ktorVersion" )
 

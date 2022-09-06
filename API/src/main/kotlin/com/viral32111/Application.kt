@@ -11,7 +11,9 @@ import io.ktor.server.plugins.contentnegotiation.*
 import org.slf4j.event.Level
 import java.text.DateFormat
 import io.github.cdimascio.dotenv.dotenv
+import io.ktor.server.plugins.defaultheaders.*
 import io.ktor.server.sessions.*
+import java.net.http.HttpHeaders
 
 // Entrypoint
 fun main() {
@@ -71,6 +73,11 @@ fun main() {
 		// https://github.com/ktorio/ktor-documentation/blob/main/codeSnippets/snippets/session-header-server/src/main/kotlin/com/example/Application.kt
 		install( Sessions ) {
 			header<MySession>( "Session-Token", SessionStorageMemory() ) // Storing in-memory is only intended for development
+		}
+
+		// Set default response headers
+		install( DefaultHeaders ) {
+			header( "X-Example", "I am a header on every response." )
 		}
 
 		// Add default routing code
