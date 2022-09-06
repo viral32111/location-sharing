@@ -51,6 +51,9 @@ dependencies {
 	// MySQL
 	implementation( "mysql:mysql-connector-java:8.0.30" )
 
+	// dotenv - https://github.com/cdimascio/dotenv-kotlin
+	implementation( "io.github.cdimascio:dotenv-kotlin:6.3.1" )
+
 	// Unit Tests
 	testImplementation( "io.ktor:ktor-server-tests-jvm:$ktorVersion" )
 	testImplementation( "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion" )

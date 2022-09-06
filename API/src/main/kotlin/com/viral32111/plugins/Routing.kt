@@ -23,5 +23,10 @@ fun Application.setupRouting() {
 			call.respond( mapOf( "users" to dao.allUsers() ) )
 		}
 
+		// Useful for testing in browsers
+		get( "/favicon.ico" ) {
+			call.respond( HttpStatusCode.Gone )
+		}
+
 	}
 }
