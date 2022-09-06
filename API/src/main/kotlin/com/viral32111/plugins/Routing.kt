@@ -19,6 +19,11 @@ fun Application.setupRouting() {
 			call.respondText( "Hello World!", ContentType.Text.Plain )
 		}
 
+		// Redirect root to Hello World
+		get( "/" ) {
+			call.respondRedirect( "/hello", permanent = false )
+		}
+
 		// Get all users - https://ktor.io/docs/interactive-website-add-persistence.html#update_routes
 		get( "/users" ) {
 			call.respond( mapOf( "users" to dao.allUsers() ) )
