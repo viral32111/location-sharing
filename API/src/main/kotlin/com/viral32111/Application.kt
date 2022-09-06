@@ -1,6 +1,6 @@
 package com.viral32111
 
-import com.viral32111.plugins.configureRouting
+import com.viral32111.plugins.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 
@@ -21,7 +21,7 @@ fun main() {
 	) {
 
 		// Add default routing code
-		configureRouting()
+		setupRouting()
 
 	}
 
