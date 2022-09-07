@@ -1,10 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/mainConstraintLayout"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
+
+	<TextView
+		android:id="@+id/mainTitleTextView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="80dp"
+		android:layout_marginTop="15dp"
+		android:layout_marginEnd="80dp"
+		android:text="@string/main_text_title"
+		android:textAlignment="center"
+		android:textSize="24sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<View
+		android:id="@+id/mainTitleDivider"
+		android:layout_width="0dp"
+		android:layout_height="1dp"
+		android:layout_marginStart="30dp"
+		android:layout_marginTop="15dp"
+		android:layout_marginEnd="30dp"
+		android:background="?android:attr/listDivider"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mainTitleTextView" />
+
+	<TextView
+		android:id="@+id/mainDescriptionTextView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="50dp"
+		android:layout_marginTop="20dp"
+		android:layout_marginEnd="50dp"
+		android:text="@string/main_text_description"
+		android:textAlignment="center"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mainTitleDivider" />
+
+	<TextView
+		android:id="@+id/mainNameLabelTextView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginEnd="30dp"
+		android:text="@string/main_input_name_label"
+		android:textAlignment="textStart"
+		app:layout_constraintBottom_toTopOf="@+id/mainNameEditText"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<EditText
+		android:id="@+id/mainNameEditText"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginTop="50dp"
+		android:layout_marginEnd="30dp"
+		android:autofillHints=""
+		android:ems="10"
+		android:hint="@string/main_input_name_placeholder"
+		android:inputType="textPersonName"
+		android:minHeight="48dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mainDescriptionTextView"
+		tools:ignore="DuplicateSpeakableTextCheck" />
+
+	<TextView
+		android:id="@+id/mainPasswordLabelTextView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginEnd="30dp"
+		android:text="@string/main_input_password_label"
+		android:textAlignment="textStart"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@+id/mainPasswordEditText"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<EditText
+		android:id="@+id/mainPasswordEditText"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginTop="50dp"
+		android:layout_marginEnd="30dp"
+		android:autofillHints=""
+		android:ems="10"
+		android:hint="@string/main_input_password_placeholder"
+		android:inputType="textPassword"
+		android:minHeight="48dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mainNameEditText"
+		tools:ignore="DuplicateSpeakableTextCheck" />
+
+	<TextView
+		android:id="@+id/mainPasswordHelpTextView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginEnd="30dp"
+		android:text="@string/main_input_password_help"
+		android:textAlignment="textEnd"
+		android:textColor="@color/blue_300"
+		android:textStyle="italic"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mainPasswordEditText" />
+
+	<CheckBox
+		android:id="@+id/mainRememberCheckBox"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginTop="60dp"
+		android:layout_marginEnd="30dp"
+		android:checked="true"
+		android:text="@string/main_checkbox_remember"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/mainPasswordEditText" />
+
+	<Button
+		android:id="@+id/mainRegisterButton"
+		android:layout_width="130dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginBottom="15dp"
+		android:text="@string/main_button_register"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<Button
+		android:id="@+id/mainLoginButton"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="20dp"
+		android:layout_marginEnd="30dp"
+		android:layout_marginBottom="15dp"
+		android:text="@string/main_button_login"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/mainRegisterButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

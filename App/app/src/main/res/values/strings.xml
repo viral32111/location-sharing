@@ -1,3 +1,18 @@
 <resources>
+
+	<!-- Application -->
 	<string name="app_name">Location Sharing</string>
+
+	<!-- Main Activity (Login) -->
+	<string name="main_text_title">Login to your account</string>
+	<string name="main_text_description">Login to your account below to continue, or register a new account if you have not got one yet.</string>
+	<string name="main_input_name_label"><b>Display Name</b> or <b>Email Address</b>:</string>
+	<string name="main_input_name_placeholder">J_Doe…</string>
+	<string name="main_input_password_label">Password:</string>
+	<string name="main_input_password_placeholder">P4ssw0rd!…</string>
+	<string name="main_input_password_help"><u>Forgot your password?</u></string>
+	<string name="main_checkbox_remember">Remember me for 30 days?</string>
+	<string name="main_button_register">Register</string>
+	<string name="main_button_login">Login</string>
+
 </resources>
