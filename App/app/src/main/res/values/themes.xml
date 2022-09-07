@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
 	<!-- Primary app theme -->
-	<style name="Theme.LocationSharing" parent="Theme.Material3.DayNight.NoActionBar">
+	<style name="Theme.LocationSharing" parent="Theme.Material3.DayNight.NoActionBar"> <!-- .NoActionBar -->
 
 		<!-- Primary brand color (buttons, checkboxes, etc.) -->
 		<item name="colorPrimary">@color/blue_400</item>
-		<item name="colorPrimaryVariant">@color/white</item>
+		<item name="colorPrimaryVariant">@color/blue_400</item>
 		<item name="colorOnPrimary">@color/white</item>
 
 		<!-- Secondary color (e.g. line under EditText's when active) -->
@@ -17,6 +18,25 @@
 		<item name="android:statusBarColor">@android:color/transparent</item>
 		<item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
 
+		<!-- Makes content shift up into the status bar -->
+		<!-- <item name="android:windowTranslucentStatus">true</item>-->
+
+		<!-- Action Bar -->
+		<item name="actionBarTheme">@style/ThemeOverlay.LocationSharing.ActionBar</item>
+		<item name="actionBarPopupTheme">@style/ThemeOverlay.LocationSharing.ActionBar.OverflowMenu</item>
+
+	</style>
+
+	<!-- Action Bar -->
+	<style name="ThemeOverlay.LocationSharing.ActionBar" parent="ThemeOverlay.Material3.Dark">
+		<item name="colorSurface">@color/blue_400</item> <!-- Background -->
+		<item name="colorOnSurface">@color/white</item> <!-- Title -->
+		<item name="colorOnSurfaceVariant">@color/white</item> <!-- Subtitle -->
+	</style>
+
+	<!-- Action Bar Overflow Menu -->
+	<style name="ThemeOverlay.LocationSharing.ActionBar.OverflowMenu" parent="ThemeOverlay.Material3.Light">
+		<item name="colorPrimary">@color/white</item> <!-- Icon -->
 	</style>
 
 </resources>
