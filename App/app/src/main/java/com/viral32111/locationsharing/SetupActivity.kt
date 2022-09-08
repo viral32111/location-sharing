@@ -18,8 +18,19 @@ class SetupActivity : AppCompatActivity() {
 		val serverButton = findViewById<Button>( R.id.setupServerButton )
 
 		loginButton.setOnClickListener {
+
 			startActivity( Intent( this, LoginActivity::class.java ) )
+
 			overridePendingTransition( R.anim.slide_in_from_right, R.anim.slide_out_to_left )
+
+		}
+
+		serverButton.setOnClickListener {
+
+			startActivity( Intent( this, ServerActivity::class.java ) )
+
+			overridePendingTransition( R.anim.slide_in_from_right, R.anim.slide_out_to_left )
+
 		}
 
 	}

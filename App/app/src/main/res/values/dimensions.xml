@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Global -->
+	<dimen name="dimension_top">15dp</dimen>
+	<dimen name="dimension_bottom">15dp</dimen>
+
+	<!-- Title -->
+	<dimen name="dimension_side_title">40dp</dimen>
+
+	<!-- Title divider -->
+	<dimen name="dimension_top_divider">15dp</dimen>
+	<dimen name="dimension_side_divider">30dp</dimen>
+
+	<!-- Text -->
+	<dimen name="dimension_side_text">50dp</dimen>
+
+	<!-- Controls (buttons, inputs, etc.) -->
+	<dimen name="dimension_side_control">30dp</dimen>
+
+	<!-- Back Button -->
+	<dimen name="dimension_width_button_back">120dp</dimen>
+	<dimen name="dimension_left_button_back">20dp</dimen>
+
+
+</resources>

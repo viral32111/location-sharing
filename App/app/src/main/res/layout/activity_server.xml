@@ -6,7 +6,7 @@
 	android:id="@+id/serverConstraintLayout"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".SetupActivity">
+	tools:context=".ServerActivity">
 
 	<TextView
 		android:id="@+id/serverTitleTextView"
@@ -15,7 +15,7 @@
 		android:layout_marginStart="@dimen/dimension_side_title"
 		android:layout_marginTop="@dimen/dimension_top"
 		android:layout_marginEnd="@dimen/dimension_side_title"
-		android:text="@string/setup_text_title"
+		android:text="@string/server_text_title"
 		android:textAlignment="center"
 		android:textSize="24sp"
 		android:textStyle="bold"
@@ -42,71 +42,90 @@
 		android:layout_marginStart="@dimen/dimension_side_text"
 		android:layout_marginTop="20dp"
 		android:layout_marginEnd="@dimen/dimension_side_text"
-		android:text="@string/setup_text_account"
+		android:text="@string/server_text_notice"
 		android:textAlignment="center"
+		android:textStyle="bold"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/serverTitleDivider" />
 
-	<Button
-		android:id="@+id/setupLoginButton"
+	<TextView
+		android:id="@+id/serverDescriptionTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimension_side_control"
-		android:layout_marginTop="15dp"
-		android:layout_marginEnd="@dimen/dimension_side_control"
-		android:text="@string/setup_button_login"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/setupRegisterButton" />
-
-	<Button
-		android:id="@+id/setupRegisterButton"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginStart="@dimen/dimension_side_text"
 		android:layout_marginTop="20dp"
-		android:layout_marginEnd="@dimen/dimension_side_control"
-		android:text="@string/setup_button_register"
+		android:layout_marginEnd="@dimen/dimension_side_text"
+		android:text="@string/server_text_description"
+		android:textAlignment="center"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/serverNoticeTextView" />
 
 	<TextView
-		android:id="@+id/setupGuestTextView"
+		android:id="@+id/serverUrlTextView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginEnd="@dimen/dimension_side_control"
+		android:labelFor="@id/serverUrlEditText"
+		android:text="@string/server_text_url"
+		android:textAlignment="textStart"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@+id/serverUrlEditText"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<EditText
+		android:id="@+id/serverUrlEditText"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginTop="60dp"
+		android:layout_marginEnd="@dimen/dimension_side_control"
+		android:autofillHints=""
+		android:ems="10"
+		android:inputType="textUri"
+		android:minHeight="48dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/serverDescriptionTextView"
+		tools:ignore="DuplicateSpeakableTextCheck" />
+
+	<TextView
+		android:id="@+id/serverSecureTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimension_side_text"
-		android:layout_marginTop="80dp"
+		android:layout_marginTop="20dp"
 		android:layout_marginEnd="@dimen/dimension_side_text"
-		android:text="@string/setup_text_guest"
+		android:text="@string/server_text_secure"
 		android:textAlignment="center"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/setupLoginButton" />
+		app:layout_constraintTop_toBottomOf="@+id/serverUrlEditText" />
 
 	<Button
-		android:id="@+id/setupGuestButton"
-		android:layout_width="0dp"
+		android:id="@+id/serverBackButton"
+		android:layout_width="@dimen/dimension_width_button_back"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimension_side_control"
-		android:layout_marginTop="20dp"
-		android:layout_marginEnd="@dimen/dimension_side_control"
-		android:text="@string/setup_button_guest"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/setupGuestTextView" />
+		android:layout_marginBottom="15dp"
+		android:text="@string/global_button_back"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
 
 	<Button
-		android:id="@+id/setupServerButton"
+		android:id="@+id/serverSwitchButton"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginStart="@dimen/dimension_left_button_back"
 		android:layout_marginEnd="@dimen/dimension_side_control"
 		android:layout_marginBottom="@dimen/dimension_bottom"
-		android:text="@string/setup_button_server"
+		android:text="@string/server_button_switch"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		app:layout_constraintStart_toEndOf="@+id/serverBackButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

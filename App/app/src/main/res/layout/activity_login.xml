@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/mainConstraintLayout"
@@ -9,13 +8,13 @@
 	tools:context=".LoginActivity">
 
 	<TextView
-		android:id="@+id/setupTitleTextView"
+		android:id="@+id/serverTitleTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="80dp"
-		android:layout_marginTop="15dp"
-		android:layout_marginEnd="80dp"
-		android:text="@string/main_text_title"
+		android:layout_marginStart="@dimen/dimension_side_title"
+		android:layout_marginTop="@dimen/dimension_top"
+		android:layout_marginEnd="@dimen/dimension_side_title"
+		android:text="@string/login_text_title"
 		android:textAlignment="center"
 		android:textSize="24sp"
 		android:textStyle="bold"
@@ -24,38 +23,38 @@
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<View
-		android:id="@+id/setupTitleDivider"
+		android:id="@+id/serverTitleDivider"
 		android:layout_width="0dp"
 		android:layout_height="1dp"
-		android:layout_marginStart="30dp"
-		android:layout_marginTop="15dp"
-		android:layout_marginEnd="30dp"
+		android:layout_marginStart="@dimen/dimension_side_divider"
+		android:layout_marginTop="@dimen/dimension_top_divider"
+		android:layout_marginEnd="@dimen/dimension_side_divider"
 		android:background="?android:attr/listDivider"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/setupTitleTextView" />
+		app:layout_constraintTop_toBottomOf="@+id/serverTitleTextView" />
 
 	<TextView
-		android:id="@+id/setupAccountTextView"
+		android:id="@+id/serverNoticeTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="50dp"
+		android:layout_marginStart="@dimen/dimension_side_text"
 		android:layout_marginTop="20dp"
-		android:layout_marginEnd="50dp"
-		android:text="@string/main_text_description"
+		android:layout_marginEnd="@dimen/dimension_side_text"
+		android:text="@string/login_text_description"
 		android:textAlignment="center"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/setupTitleDivider" />
+		app:layout_constraintTop_toBottomOf="@+id/serverTitleDivider" />
 
 	<TextView
-		android:id="@+id/mainNameLabelTextView"
+		android:id="@+id/mainNameTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
-		android:layout_marginEnd="30dp"
+		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginEnd="@dimen/dimension_side_control"
 		android:labelFor="@id/mainNameEditText"
-		android:text="@string/main_input_name_label"
+		android:text="@string/login_text_name"
 		android:textAlignment="textStart"
 		app:layout_constraintBottom_toTopOf="@+id/mainNameEditText"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -65,9 +64,9 @@
 		android:id="@+id/mainNameEditText"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
+		android:layout_marginStart="@dimen/dimension_side_control"
 		android:layout_marginTop="50dp"
-		android:layout_marginEnd="30dp"
+		android:layout_marginEnd="@dimen/dimension_side_control"
 		android:autofillHints=""
 		android:ems="10"
 		android:inputType="textPersonName"
@@ -75,31 +74,30 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/setupAccountTextView"
+		app:layout_constraintTop_toBottomOf="@+id/serverNoticeTextView"
 		tools:ignore="DuplicateSpeakableTextCheck" />
 
 	<TextView
-		android:id="@+id/mainPasswordLabelTextView"
+		android:id="@+id/mainPasswordTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
-		android:layout_marginEnd="30dp"
+		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginEnd="@dimen/dimension_side_control"
 		android:labelFor="@id/mainPasswordEditText"
-		android:text="@string/main_input_password_label"
+		android:text="@string/login_text_password"
 		android:textAlignment="textStart"
 		android:textStyle="bold"
 		app:layout_constraintBottom_toTopOf="@+id/mainPasswordEditText"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="1.0"
 		app:layout_constraintStart_toStartOf="parent" />
 
 	<EditText
 		android:id="@+id/mainPasswordEditText"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
+		android:layout_marginStart="@dimen/dimension_side_control"
 		android:layout_marginTop="50dp"
-		android:layout_marginEnd="30dp"
+		android:layout_marginEnd="@dimen/dimension_side_control"
 		android:autofillHints=""
 		android:ems="10"
 		android:inputType="textPassword"
@@ -114,9 +112,9 @@
 		android:id="@+id/mainPasswordHelpTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
-		android:layout_marginEnd="30dp"
-		android:text="@string/main_input_password_help"
+		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginEnd="@dimen/dimension_side_control"
+		android:text="@string/login_text_forgotpassword"
 		android:textAlignment="textEnd"
 		android:textColor="@color/blue_300"
 		android:textStyle="italic"
@@ -128,35 +126,35 @@
 		android:id="@+id/mainRememberCheckBox"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
+		android:layout_marginStart="@dimen/dimension_side_control"
 		android:layout_marginTop="60dp"
-		android:layout_marginEnd="30dp"
+		android:layout_marginEnd="@dimen/dimension_side_control"
 		android:checked="true"
-		android:text="@string/main_checkbox_remember"
+		android:text="@string/login_checkbox_remember"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/mainPasswordEditText" />
 
 	<Button
-		android:id="@+id/mainLoginButton"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="20dp"
-		android:layout_marginEnd="30dp"
-		android:layout_marginBottom="15dp"
-		android:text="@string/main_button_login"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toEndOf="@+id/mainBackButton" />
-
-	<Button
 		android:id="@+id/mainBackButton"
-		android:layout_width="120dp"
+		android:layout_width="@dimen/dimension_width_button_back"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
-		android:layout_marginBottom="15dp"
+		android:layout_marginStart="@dimen/dimension_side_control"
+		android:layout_marginBottom="@dimen/dimension_bottom"
 		android:text="@string/global_button_back"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintStart_toStartOf="parent" />
+
+	<Button
+		android:id="@+id/mainLoginButton"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimension_left_button_back"
+		android:layout_marginEnd="@dimen/dimension_side_control"
+		android:layout_marginBottom="@dimen/dimension_bottom"
+		android:text="@string/login_button_login"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/mainBackButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

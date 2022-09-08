@@ -1,18 +1,18 @@
 package com.viral32111.locationsharing
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 
-class LoginActivity : AppCompatActivity() {
+class ServerActivity : AppCompatActivity() {
 
 	override fun onCreate( savedInstanceState: Bundle? ) {
 
 		super.onCreate( savedInstanceState )
-		setContentView( R.layout.activity_login )
+		setContentView( R.layout.activity_server )
 
-		val loginButton = findViewById<Button>( R.id.mainLoginButton )
-		val backButton = findViewById<Button>( R.id.mainBackButton )
+		val switchButton = findViewById<Button>( R.id.serverSwitchButton )
+		val backButton = findViewById<Button>( R.id.serverBackButton )
 
 		backButton.setOnClickListener {
 
