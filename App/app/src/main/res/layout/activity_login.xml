@@ -6,10 +6,10 @@
 	android:id="@+id/mainConstraintLayout"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".MainActivity">
+	tools:context=".LoginActivity">
 
 	<TextView
-		android:id="@+id/mainTitleTextView"
+		android:id="@+id/setupTitleTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="80dp"
@@ -24,7 +24,7 @@
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<View
-		android:id="@+id/mainTitleDivider"
+		android:id="@+id/setupTitleDivider"
 		android:layout_width="0dp"
 		android:layout_height="1dp"
 		android:layout_marginStart="30dp"
@@ -33,10 +33,10 @@
 		android:background="?android:attr/listDivider"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/mainTitleTextView" />
+		app:layout_constraintTop_toBottomOf="@+id/setupTitleTextView" />
 
 	<TextView
-		android:id="@+id/mainDescriptionTextView"
+		android:id="@+id/setupAccountTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="50dp"
@@ -46,7 +46,7 @@
 		android:textAlignment="center"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/mainTitleDivider" />
+		app:layout_constraintTop_toBottomOf="@+id/setupTitleDivider" />
 
 	<TextView
 		android:id="@+id/mainNameLabelTextView"
@@ -54,6 +54,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginStart="30dp"
 		android:layout_marginEnd="30dp"
+		android:labelFor="@id/mainNameEditText"
 		android:text="@string/main_input_name_label"
 		android:textAlignment="textStart"
 		app:layout_constraintBottom_toTopOf="@+id/mainNameEditText"
@@ -69,13 +70,12 @@
 		android:layout_marginEnd="30dp"
 		android:autofillHints=""
 		android:ems="10"
-		android:hint="@string/main_input_name_placeholder"
 		android:inputType="textPersonName"
 		android:minHeight="48dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/mainDescriptionTextView"
+		app:layout_constraintTop_toBottomOf="@+id/setupAccountTextView"
 		tools:ignore="DuplicateSpeakableTextCheck" />
 
 	<TextView
@@ -84,6 +84,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginStart="30dp"
 		android:layout_marginEnd="30dp"
+		android:labelFor="@id/mainPasswordEditText"
 		android:text="@string/main_input_password_label"
 		android:textAlignment="textStart"
 		android:textStyle="bold"
@@ -101,7 +102,6 @@
 		android:layout_marginEnd="30dp"
 		android:autofillHints=""
 		android:ems="10"
-		android:hint="@string/main_input_password_placeholder"
 		android:inputType="textPassword"
 		android:minHeight="48dp"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -138,16 +138,6 @@
 		app:layout_constraintTop_toBottomOf="@+id/mainPasswordEditText" />
 
 	<Button
-		android:id="@+id/mainRegisterButton"
-		android:layout_width="130dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="30dp"
-		android:layout_marginBottom="15dp"
-		android:text="@string/main_button_register"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
-
-	<Button
 		android:id="@+id/mainLoginButton"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
@@ -157,6 +147,16 @@
 		android:text="@string/main_button_login"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toEndOf="@+id/mainRegisterButton" />
+		app:layout_constraintStart_toEndOf="@+id/mainBackButton" />
+
+	<Button
+		android:id="@+id/mainBackButton"
+		android:layout_width="120dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="30dp"
+		android:layout_marginBottom="15dp"
+		android:text="@string/global_button_back"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

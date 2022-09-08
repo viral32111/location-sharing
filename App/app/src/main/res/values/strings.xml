@@ -3,19 +3,25 @@
 	<!-- Application -->
 	<string name="app_name">Location Sharing</string>
 
-	<!-- App Bar Options -->
-	<string name="appbar_option_server">Switch Server</string>
+	<!-- Global -->
+	<string name="global_button_back">Back</string>
+
+	<!-- Setup Activity -->
+	<string name="setup_text_title">Let\'s get started</string>
+	<string name="setup_text_account">If this is your first time using this app then you should begin by registering a new account. If you have used this app before, then you should login to your existing account.</string>
+	<string name="setup_text_guest">If you are participating in an event or field trip, or would simply prefer a temporary account, then you should continue as a guest.</string>
+	<string name="setup_button_register">Register a new account</string>
+	<string name="setup_button_login">Login to an existing account</string>
+	<string name="setup_button_guest">Continue as a guest</string>
+	<string name="setup_button_server">Switch server instance</string>
 
 	<!-- Main Activity (Login) -->
 	<string name="main_text_title">Login to your account</string>
-	<string name="main_text_description">Login to your account below to continue, or register a new account if you do not have one.</string>
+	<string name="main_text_description">Login to your existing account below to continue.</string>
 	<string name="main_input_name_label"><b>Display Name</b> or <b>Email Address</b>:</string>
-	<string name="main_input_name_placeholder">J_Doe…</string>
 	<string name="main_input_password_label">Password:</string>
-	<string name="main_input_password_placeholder">P4ssw0rd!…</string>
 	<string name="main_input_password_help"><u>Forgot your password?</u></string>
 	<string name="main_checkbox_remember">Remember me for 30 days?</string>
-	<string name="main_button_register">Register</string>
 	<string name="main_button_login">Login</string>
 
 </resources>
