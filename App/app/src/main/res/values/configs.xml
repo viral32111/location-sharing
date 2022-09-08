@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Offline shared preferences -->
+	<string name="config_sharedpreferences_offline">com.viral32111.LocationSharing.OfflinePreferences</string>
+	<string name="config_sharedpreferences_offline_serverurl">serverUrl</string>
+
+</resources>
