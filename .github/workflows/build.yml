@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  push:
+    paths:
+    - 'App/**'
+    - 'API/**'
+    - '.github/workflows/build.yml'
+    branches:
+    - '**'
+    tags:
+    - '*.*.*'
+  pull_request:
+    branches:
+    - '**'
+  workflow_dispatch:
+
+jobs:
+  app:
+    name: App
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+
+    steps:
+    - name: Clone Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: 17
+        distribution: temurin
+
+    - name: Build using Gradle
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: build
+
+    - name: Upload Build
+      uses: actions/upload-artifact@v3
+      with:
+        name: LocationSharing
+        path: |
+          ./App/app/build/outputs/apk/debug/app-debug.apk
+          ./App/app/build/outputs/apk/debug/output-metadata.json
