@@ -1,5 +1,6 @@
 package com.viral32111.plugins
 
+import com.google.gson.JsonObject
 import com.viral32111.MySession
 import com.viral32111.dao.dao
 import io.ktor.http.*
@@ -13,6 +14,15 @@ fun Application.setupRouting() {
 	log.info( "Setting up default routing." )
 
 	routing {
+
+		// Status
+		get( "/status" ) {
+			val status = JsonObject()
+			status.addProperty( "version", "0.0.1" )
+
+
+			call.respond( status )
+		}
 
 		// Hello World
 		get( "/hello" ) {
