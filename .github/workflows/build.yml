@@ -48,3 +48,34 @@ jobs:
         path: |
           ./App/app/build/outputs/apk/debug/app-debug.apk
           ./App/app/build/outputs/apk/debug/output-metadata.json
+
+  api:
+    name: API
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+
+    steps:
+    - name: Clone Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: 17
+        distribution: temurin
+
+    - name: Set Gradle Permissions
+      run: chmod +x ./API/gradlew
+
+    - name: Build using Gradle
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: build
+        build-root-directory: ./API
+
+    - name: Upload Build
+      uses: actions/upload-artifact@v3
+      with:
+        name: LocationSharingAPI
+        path: ./API/build/libs/LocationSharingAPI-*.jar
