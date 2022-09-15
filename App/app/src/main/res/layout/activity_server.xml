@@ -93,18 +93,46 @@
 		app:layout_constraintTop_toBottomOf="@+id/serverDescriptionTextView"
 		tools:ignore="DuplicateSpeakableTextCheck" />
 
+	<ProgressBar
+		android:id="@+id/serverLoadingProgressBar"
+		style="?android:attr/progressBarStyle"
+		android:layout_width="wrap_content"
+		android:layout_height="0dp"
+		android:layout_marginBottom="10dp"
+		android:indeterminate="true"
+		android:indeterminateTint="@color/blue_400"
+		android:indeterminateTintMode="src_atop"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="@+id/serverUrlEditText"
+		app:layout_constraintEnd_toEndOf="@+id/serverUrlEditText"
+		app:layout_constraintTop_toTopOf="@+id/serverUrlEditText" />
+
 	<TextView
 		android:id="@+id/serverSecureTextView"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimension_side_text"
-		android:layout_marginTop="20dp"
+		android:layout_marginTop="10dp"
 		android:layout_marginEnd="@dimen/dimension_side_text"
 		android:text="@string/server_text_secure"
 		android:textAlignment="center"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/serverUrlEditText" />
+
+	<TextView
+		android:id="@+id/serverStatusTextView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimension_side_text"
+		android:layout_marginTop="35dp"
+		android:layout_marginEnd="@dimen/dimension_side_text"
+		android:textAlignment="center"
+		android:textColor="#F44336"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/serverSecureTextView" />
 
 	<Button
 		android:id="@+id/serverBackButton"
@@ -123,6 +151,7 @@
 		android:layout_marginStart="@dimen/dimension_left_button_back"
 		android:layout_marginEnd="@dimen/dimension_side_control"
 		android:layout_marginBottom="@dimen/dimension_bottom"
+		android:enabled="false"
 		android:text="@string/server_button_switch"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"

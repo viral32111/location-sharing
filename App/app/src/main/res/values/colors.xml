@@ -19,4 +19,8 @@
 	<color name="blue_300">#6879ed</color>
 	<color name="blue_400">#3e5be9</color>
 
+	<!-- Status -->
+	<color name="success">#4caf50</color>
+	<color name="failure">#f44336</color>
+
 </resources>

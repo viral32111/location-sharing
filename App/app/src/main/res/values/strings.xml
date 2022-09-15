@@ -29,8 +29,10 @@
 	<string name="server_text_title">Switch server instance</string>
 	<string name="server_text_notice">This section of the app is for advanced users, if you do not know what you are doing then press back to return to the previous section.</string>
 	<string name="server_text_description">As this app is open-source, anyone can host their own instance of the official API service. This is often desirable for organisations that wish to keep their data on-site, or even privacy-conscious friend groups and families.</string>
-	<string name="server_text_url">Server URL:</string>
-	<string name="server_text_secure">If the URL is using HTTPS, the server TLS certificate will be validated against the device certificate store, so any custom root certificates should be installed there.</string>
+	<string name="server_text_url">Server Base URL:</string>
+	<string name="server_text_secure">The server TLS certificates is validated using the device certificate store, so any custom root certificates should be installed there.</string>
+	<string name="server_text_status_success">The server (running version %s) is working as expected.\n\nYour server has been switched.</string>
+	<string name="server_text_status_failure">There was an issue communicating with the server (%s).\n\nYour server has not been switched.</string>
 	<string name="server_button_switch">Switch</string>
 
 </resources>

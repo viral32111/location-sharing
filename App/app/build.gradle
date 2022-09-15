@@ -9,10 +9,12 @@ android {
 
 	defaultConfig {
 		applicationId "com.viral32111.locationsharing"
+
 		minSdk 21
 		targetSdk 32
+
 		versionCode 1
-		versionName "1.0"
+		versionName "0.1.0"
 
 		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 	}
@@ -41,18 +43,22 @@ dependencies {
 	implementation "androidx.core:core-ktx:1.8.0"
 	implementation "androidx.appcompat:appcompat:1.5.0"
 	implementation "com.google.android.material:material:1.6.1"
-	implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+	implementation "androidx.constraintlayout:constraintlayout:2.1.4"
 
 	// Android Coroutines
-	implementation( "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1" )
-	implementation( "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1" )
-	implementation( "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1" )
-	implementation( "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1" )
-	implementation( "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1" )
+	implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+	implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+	implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+	implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+	implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1"
 
 	// Ktor
 	implementation "io.ktor:ktor-client-core:2.1.1"
-	implementation "io.ktor:ktor-client-cio:2.1.1"
+	implementation "io.ktor:ktor-client-android:2.1.1"
+
+	// Ktor Json
+	implementation "io.ktor:ktor-client-content-negotiation:2.1.1"
+	implementation "io.ktor:ktor-serialization-gson:2.1.1"
 
 	// Testing
 	testImplementation "junit:junit:4.13.2"
